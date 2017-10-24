@@ -1,0 +1,237 @@
+@font-face {
+	font-family: 'Roboto_Bold';
+	src: url('../fonts/Roboto-Bold.eot');
+	src: url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Roboto-Bold.woff2') format('woff2'),
+		url('../fonts/Roboto-Bold.woff') format('woff'),
+		url('../fonts/Roboto-Bold.ttf') format('truetype'),
+		url('../fonts/Roboto-Bold.svg#Roboto-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto_Regular';
+	src: url('../fonts/Roboto-Regular.eot');
+	src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Roboto-Regular.woff2') format('woff2'),
+		url('../fonts/Roboto-Regular.woff') format('woff'),
+		url('../fonts/Roboto-Regular.ttf') format('truetype'),
+		url('../fonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.robR() {
+	font-family: 'Roboto_Regular';
+}
+.robB() {
+	font-family: 'Roboto_Bold';
+}
+html {
+	font-size: 10px;
+}
+body {
+	.robR();
+}
+.header {
+	padding-top: 2rem;
+	.logo-block {
+		h4 {
+			font-size: 1.3rem;
+			text-transform: uppercase;
+			.robB();
+		}
+	}
+	&-link {
+		a {
+			color: #252525;
+			text-decoration: none;
+			margin-right: 1.5rem;
+			font-size: 1.2rem;
+			&:hover {
+				color: #252525;
+			}
+		}
+		.user-block {
+			display: inline-block;
+			float: right;
+			a {
+				margin-right: 0;
+			}
+		}
+		.divider {
+			margin: .5rem 0 1.5rem;
+		}
+	}
+	.mleft {
+		margin-left: -2rem;
+	}
+	.pad {
+		padding: 0;
+		.box {
+			width: 12rem;
+			height: 7rem;
+			background-color: #e2e2e2;
+		}
+	}
+	.info {
+		a {
+			margin-bottom: 1.5rem;
+			margin-left: .8rem;
+			.robR();
+			color: #252525;
+			text-decoration: underline;
+			font-size: 1.2rem;
+			&:hover {
+				color: #252525;
+			}
+		}
+		.basket {
+			position: relative;
+			&:before {
+				content: '';
+				width: 2rem;
+				height: 2rem;
+				background: url(../img/basket.png) center no-repeat;
+				background-size: 150%;
+				position: absolute;
+				left: -1.8rem;
+				top: -.4rem;
+			}
+		}
+		.favorites {
+			position: relative;
+			&:before {
+				content: '';
+				width: 2rem;
+				height: 2rem;
+				background: url(../img/favorites.png) center no-repeat;
+				background-size: 100%;
+				position: absolute;
+				left: -2rem;
+				top: -.3rem;
+			}
+		}
+		.compare {
+			position: relative;
+			&:before {
+				content: '';
+				width: 3rem;
+				height: 2rem;
+				background: url(../img/compare.png) center no-repeat;
+				background-size: 160%;
+				position: absolute;
+				left: -2.2rem;
+				top: -.2rem;
+			}
+		}
+	}
+	.item-block {
+		margin-left: 1.5rem;
+		float: left;
+		width: 7.2rem;
+		height: 7.2rem;
+		border: 1px solid #d7d7d7;
+		img {
+			margin-top: 1.4rem;
+		}
+	}
+	.address {
+		p {
+			.robB();
+		}
+		.time {
+			float: right;
+			.robR();
+		}
+		.tel {
+			font-size: 2.5rem;
+		}
+		p:last-child {
+			.robR();
+		}
+		a {
+			position: relative;
+			color: #333333;
+			.robR();
+			float: right;
+			text-decoration: underline;
+			text-decoration-style: dotted;
+			&:before {
+				content: '';
+				width: 1rem;
+				height: 1rem;
+				background: url(../img/arrow.png) center no-repeat;
+				background-size: cover;
+				position: absolute;
+				left: -1.2rem;
+				top: .6rem;
+			}
+		}
+	}
+}
+.divider {
+	width: 100%;
+	height: 1px;
+	background-color: #d7d7d7;
+}
+ul li {
+	list-style: none;
+	display: inline-block;
+	padding: 0;
+}
+nav {
+	margin-top: 2rem;
+	.nav-row {
+		margin-left: 2.5rem;
+		width: 95%;
+		.find {
+			border-radius: 8px 0 0 8px;
+			border: none;
+			background: #ffcc00 url(../img/find.png) center no-repeat;
+			float: left;
+			width: 4rem;
+			height: 3.5rem;
+		}
+		.navigation {
+			display: inline-block;
+			background-color: #252525;
+			height: 3.5rem;
+			ul {
+				padding: 0;
+				a {
+					&:first-child {
+						margin-left: 2rem;
+					}
+					&:last-child {
+						margin-right: 2rem;
+						li {
+							width: 9.5rem;
+						}
+					}
+					.robR();
+					font-size: 1.5rem;
+					line-height: 3.3rem;
+					padding: .6rem 1rem .9rem;
+					transition: .3s;
+					color: #fff;
+					margin: 0;
+					&:hover {
+						background-color: #ffcc00;
+						color: #252525;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+		.sale {
+			.robB();
+			text-transform: uppercase;
+			background-color: #ffcc00;
+			border: none;
+			border-radius: 0 8px 8px 0;
+			width: 12rem;
+			height: 3.5rem;
+			margin-left: -.4rem;
+		}
+	}
+}
